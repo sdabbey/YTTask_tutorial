@@ -86,7 +86,7 @@ AUTHENTICATION_BACKENDS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yttask-postgres',
+        'NAME': 'yttask_tutorial-postgres',
         'USER': 'default',
         'PASSWORD': 'f4gilunxL9pd',
         'HOST': 'ep-autumn-queen-29793477-pooler.us-east-1.postgres.vercel-storage.com',
