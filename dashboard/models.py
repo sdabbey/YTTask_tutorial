@@ -12,7 +12,7 @@ class Task(models.Model):
     secret_code = models.CharField(max_length=50)
 
     class Meta:
-        db_table = 'Task'
+        db_table = 'dashboard_task'
 
 
 
