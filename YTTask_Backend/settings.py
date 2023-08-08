@@ -84,6 +84,18 @@ AUTHENTICATION_BACKENDS = [
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'yXYUwrSrMS0Mgq05LLee',
+        'HOST': 'containers-us-west-128.railway.app',
+        'PORT': 6616,
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    },
+
      'second_db': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
@@ -97,7 +109,6 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config()
 AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
