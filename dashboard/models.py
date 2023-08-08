@@ -11,7 +11,14 @@ class Task(models.Model):
     point = models.FloatField()
     secret_code = models.CharField(max_length=50)
 
-    
+    class Meta:
+        db_table = 'Task'
+
+
+
+
+
+
     def __str__(self):
         return self.title
 
