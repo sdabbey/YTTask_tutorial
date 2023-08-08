@@ -23,7 +23,7 @@ class Task(models.Model):
         return self.title
 
 class YTTasker_task(models.Model):
-    tasker = models.ForeignKey(User,  on_delete=models.CASCADE)
+    tasker = models.ForeignKey('accounts.User',  on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     completed = models.BooleanField(default=False)
 

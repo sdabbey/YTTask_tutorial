@@ -110,8 +110,14 @@ DATABASES = {
 }
 
 
-DATABASE_ROUTERS = ['YTTask_Backend.database_router.SecondDBRouter']
 
+
+DATABASE_ROUTERS = ['YTTask_Backend.database_router.SecondDBRouter', 'multidb.MultiDBRouter']
+
+MULTIDB_DATABASES = {
+    'default': ['default'],
+    'second_db': ['dashboard'],  # Replace with your app name
+}
 AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
