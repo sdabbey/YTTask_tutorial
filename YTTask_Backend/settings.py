@@ -109,6 +109,9 @@ DATABASES = {
     }
 }
 
+
+DATABASE_ROUTERS = ['YTTask_Backend.database_router.SecondDBRouter']
+
 AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
