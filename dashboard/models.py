@@ -10,6 +10,10 @@ class Task(models.Model):
     prompt = models.CharField(max_length=500)
     point = models.FloatField()
     secret_code = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'Task_model'  # Specify the custom table name for Model 1
+        using = 'default'
     def __str__(self):
         return self.title
 
@@ -17,6 +21,10 @@ class YTTasker_task(models.Model):
     tasker = models.ForeignKey(User,  on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     completed = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'YTTasker_model'  # Specify the custom table name for Model 1
+        using = 'second_db'
 
     def __str__(self):
         return f'{self.tasker} - {self.task}'
