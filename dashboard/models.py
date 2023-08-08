@@ -13,7 +13,7 @@ class Task(models.Model):
 
     class Meta:
         db_table = 'Task_model'  # Specify the custom table name for Model 1
-        using = 'default'
+     
     def __str__(self):
         return self.title
 
@@ -24,7 +24,7 @@ class YTTasker_task(models.Model):
 
     class Meta:
         db_table = 'YTTasker_model'  # Specify the custom table name for Model 1
-        using = 'second_db'
+        
 
     def __str__(self):
         return f'{self.tasker} - {self.task}'
@@ -34,7 +34,7 @@ class YTTasker_task(models.Model):
         users = User.objects.all()
         if created:
             for user in users:
-                YTTasker_task.objects.create(tasker=user, task=instance)
+                YTTasker_task.objects.using('second_db').create(tasker=user, task=instance)
 
 class Notification(models.Model):
     info = models.CharField(max_length=500)
