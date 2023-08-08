@@ -84,13 +84,13 @@ AUTHENTICATION_BACKENDS = [
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 DATABASES = {
-    'default': {
+     'second_db': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yttask_tutorial-postgres',
-        'USER': 'default',
-        'PASSWORD': 'f4gilunxL9pd',
-        'HOST': 'ep-autumn-queen-29793477-pooler.us-east-1.postgres.vercel-storage.com',
-        'PORT': 5432,
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'U8AMHtoO294bX5m4GabS',
+        'HOST': 'containers-us-west-163.railway.app',
+        'PORT': 6361,
         'OPTIONS': {
             'sslmode': 'require',
         }
